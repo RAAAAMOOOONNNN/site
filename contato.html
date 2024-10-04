@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-image: url('fotos/um-jogo-de-video-colorido-e-mostrado-com-um-fundo-roxo-e-azul_1020200-11995.avif'); /* Altere para o caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        #contato {
+            background: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+            padding: 30px;
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 350px; /* Largura do formulário */
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px; /* Tamanho de fonte aumentado */
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Espaço entre os botões e o formulário */
+        }
+        button {
+            background-color: rgb(255, 251, 0);
+            color: black;
+            padding: 12px;
+            border: none;
+            border-radius: 8px; /* Bordas arredondadas */
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            flex: 1; /* Para botões ocuparem o mesmo espaço */
+            margin: 0 5px; /* Espaço entre os botões */
+        }
+        button:hover {
+            background-color: rgba(255, 251, 0, 0.8);
+        }
+        label {
+            font-style: italic;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: calc(100% - 24px); /* Ajusta a largura para considerar padding */
+            padding: 12px; /* Padding para os campos */
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px; /* Bordas arredondadas */
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo claro para os campos */
+            color: black;
+            box-sizing: border-box; /* Para garantir que o padding não quebre a largura */
+        }
+    </style>
+</head>
+<body>
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="nav-buttons">
+            <button onclick="location.href='sobre.html'">Sobre</button>
+            <button onclick="location.href='projeto.html'">Projetos</button>
+        </div>
+        <form id="form-contato" onsubmit="return validarFormulario()">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script>
+        function validarFormulario() {
+            // Lógica de validação
+            alert('Formulário enviado com sucesso!');
+
+            // Resetar o formulário após envio
+            document.getElementById('form-contato').reset();
+
+            return false; // Evita o envio real para testes
+        }
+    </script>
+</body>
+</html>

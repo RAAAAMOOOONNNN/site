@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Meu Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('fotos/um-jogo-de-video-colorido-e-mostrado-com-um-fundo-roxo-e-azul_1020200-11995.avif');
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center; /* Centraliza a imagem */
+            opacity: 0.8;
+            z-index: -1;
+        }
+        header {
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: rgb(255, 251, 0);
+            font-weight: bold;
+        }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <h1> Micael Ramon de Almeida Malheiro</h1>
+        <nav>
+            <ul>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+                <li><a href="projeto.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <p>&copy; 2024 Micael Ramon de Almeida Malheiro. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

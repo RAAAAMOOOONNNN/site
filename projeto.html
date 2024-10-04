@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('fotos/um-jogo-de-video-colorido-e-mostrado-com-um-fundo-roxo-e-azul_1020200-11995.avif'); /* Coloque o caminho da sua imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        #projetos {
+            background: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 1000px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #444;
+        }
+
+        .projeto-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .projeto {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 30%; /* Tamanho de cada projeto */
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .projeto:hover {
+            transform: scale(1.05);
+        }
+
+        .projeto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .projeto-info {
+            margin-top: 15px;
+        }
+
+        .projeto-info h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .projeto-info a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .projeto-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo dos botões "Sobre" e "Contato" */
+        #nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #nav-buttons button {
+            background-color: yellow; /* Mudando a cor para amarelo */
+            color: black; /* Texto preto para melhor contraste */
+            border: none;
+            padding: 10px 20px;
+            margin: 0 30px; /* Aumenta a distância entre os botões */
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        #nav-buttons button:hover {
+            background-color: #fcd34d; /* Amarelo mais claro ao passar o mouse */
+        }
+
+        /* Tornando o layout responsivo */
+        @media (max-width: 900px) {
+            .projeto {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="nav-buttons">
+        <button id="btnSobre">Sobre</button>
+        <button id="btnContato">Contato</button>
+    </div>
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+
+        <div class="projeto-container">
+            <!-- Projeto 1 -->
+            <div class="projeto">
+                <img src="fotos/Captura de tela_2-10-2024_203825_github.com.jpeg" alt="Projeto 1">
+                <div class="projeto-info">
+                    <h3>Meu Github</h3>
+                    <a href="https://github.com/RAAAAMOOOONNNN" target="_blank">Visitar Projeto</a>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="projeto">
+                <img src="fotos/flor.jpg" alt="Projeto 2">
+                <div class="projeto-info">
+                    <h3>Flores</h3>
+                    <a href="https://github.com/RAAAAMOOOONNNN/flowes" target="_blank">Visitar Projeto</a>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="projeto">
+                <img src="fotos/baixados.jfif" alt="Projeto 3">
+                <div class="projeto-info">
+                    <h3>Projeto de mintirinha</h3>
+                    <a href="https://github.com/RAAAAMOOOONNNN" target="_blank">Visitar Projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let sobreClicks = 0;
+        let contatoClicks = 0;
+
+        const btnSobre = document.getElementById('btnSobre');
+        const btnContato = document.getElementById('btnContato');
+
+        btnSobre.addEventListener('click', () => {
+            sobreClicks++;
+            if (sobreClicks < 3) {
+                btnSobre.style.transform = `translate(-10px, -10px)`; // Pulando para a esquerda
+                setTimeout(() => {
+                    btnSobre.style.transform = 'translate(0, 0)'; // Retorna à posição original
+                }, 200); // Aguarda um pequeno intervalo para o "pulo"
+            } else {
+                window.location.href = "sobre.html"; // Redireciona para a página "Sobre"
+            }
+        });
+
+        btnContato.addEventListener('click', () => {
+            contatoClicks++;
+            if (contatoClicks < 3) {
+                btnContato.style.transform = `translate(10px, -10px)`; // Pulando para a direita
+                setTimeout(() => {
+                    btnContato.style.transform = 'translate(0, 0)'; // Retorna à posição original
+                }, 200); // Aguarda um pequeno intervalo para o "pulo"
+            } else {
+                window.location.href = "contato.html"; // Redireciona para a página "Contato"
+            }
+        });
+    </script>
+
+</body>
+</html>

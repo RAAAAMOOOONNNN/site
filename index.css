@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização do header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #28a745; /* Cor ao passar o mouse */
+}
+
+nav .active {
+    font-weight: bold; /* Destaque para a página ativa */
+}
+
+/* Estilo das seções */
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 5px; /* Cantos arredondados */
+    background: #f9f9f9; /* Fundo claro */
+}
+
+/* Imagens */
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Cantos arredondados para a imagem */
+}
+
+/* Estilo do footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section {
+        margin: 10px; /* Margem reduzida em telas menores */
+    }
+}
+
+/* Animação de fade-in */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
